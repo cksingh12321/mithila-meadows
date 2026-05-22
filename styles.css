@@ -352,7 +352,7 @@ p{margin:0 0 14px; color:var(--muted);}
 }
 .gallery-grid img:hover{transform:scale(1.03); filter:brightness(1.05);}
 .gallery-grid img:nth-child(1),
-.gallery-grid img:nth-child(6){grid-row:span 2; height:494px;}
+.gallery-grid img:nth-child(7){grid-row:span 2; height:494px;}
 
 /* DIGNITARIES */
 .dignitaries{margin-top:80px; padding-top:60px; border-top:1px solid var(--line);}
