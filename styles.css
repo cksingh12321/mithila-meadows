@@ -88,9 +88,65 @@ p{margin:0 0 14px; color:var(--muted);}
 .btn-ghost:hover{background:rgba(255,255,255,0.12);}
 .btn.full{width:100%;}
 
+/* TOP UTILITY BAR */
+.topbar{
+  position:fixed; top:0; left:0; right:0; z-index:51;
+  background:var(--green-900);
+  color:rgba(255,255,255,0.92);
+  font-size:0.82rem;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.topbar-inner{
+  max-width:var(--max); margin:0 auto;
+  padding:7px 24px;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px;
+}
+.topbar-contact{display:flex; align-items:center; gap:22px;}
+.topbar-contact a{
+  display:inline-flex; align-items:center; gap:7px;
+  color:rgba(255,255,255,0.88);
+  transition:color .2s ease;
+}
+.topbar-contact a:hover{color:var(--gold);}
+.topbar-contact svg{flex-shrink:0; color:var(--gold);}
+
+.topbar-social{display:flex; align-items:center; gap:6px;}
+.topbar-label{
+  margin-right:10px;
+  color:rgba(255,255,255,0.55);
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  font-size:0.7rem;
+}
+.topbar-social a{
+  width:28px; height:28px;
+  border-radius:50%;
+  display:grid; place-items:center;
+  color:rgba(255,255,255,0.85);
+  transition:background .2s ease, color .2s ease, transform .2s ease;
+}
+.topbar-social a:hover{
+  background:rgba(255,255,255,0.12);
+  color:var(--gold);
+  transform:translateY(-1px);
+}
+.topbar-wa{
+  background:#25D366; color:#fff !important;
+  width:auto !important; height:28px;
+  padding:0 12px; gap:7px;
+  border-radius:999px !important;
+  font-weight:500;
+}
+.topbar-wa:hover{
+  background:#1ebe5a !important;
+  color:#fff !important;
+}
+.topbar-wa .wa-label{font-size:0.78rem;}
+
 /* NAVIGATION */
 .nav{
-  position:fixed; top:0; left:0; right:0; z-index:50;
+  position:fixed; top:36px; left:0; right:0; z-index:50;
   background:rgba(251,246,236,0.85);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
@@ -597,6 +653,20 @@ p{margin:0 0 14px; color:var(--muted);}
   display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
   font-size:0.82rem;
   color:rgba(255,255,255,0.55);
+}
+
+/* Topbar visibility helpers */
+.hide-sm{display:inline-flex;}
+.hide-md{display:inline;}
+@media (max-width: 760px){
+  .hide-md{display:none;}
+}
+@media (max-width: 560px){
+  .hide-sm{display:none !important;}
+  .topbar-inner{padding:7px 16px; gap:8px;}
+  .topbar-contact{gap:0;}
+  .topbar-social{gap:4px;}
+  .topbar-wa{padding:0 9px;}
 }
 
 /* RESPONSIVE */
