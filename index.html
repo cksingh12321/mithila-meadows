@@ -28,6 +28,7 @@
         <a href="#ponds">Fish Ponds</a>
         <a href="#stay">Stay & Experience</a>
         <a href="#gallery">Gallery</a>
+        <a href="#videos">Videos</a>
         <a href="#contact" class="nav-cta">Plan a Visit</a>
       </nav>
       <button class="nav-toggle" aria-label="Open menu">☰</button>
@@ -234,6 +235,64 @@
     </div>
   </section>
 
+  <!-- VIDEOS -->
+  <!-- NOTE: Replace data-video-id with your own YouTube video IDs (the bit after ?v= in a YouTube URL).
+       Clicking a card opens the video in a lightbox. -->
+  <section id="videos" class="section videos alt-bg">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow dark">Watch & Listen</p>
+        <h2>Stories from the farm.</h2>
+        <p class="lead">Short films from Mithila Meadows — the orchards in bloom, an art workshop in progress, a morning catch from the ponds.</p>
+      </div>
+
+      <div class="video-grid">
+        <button class="video-card" data-video-id="dQw4w9WgXcQ" aria-label="Play video: A Day at Mithila Meadows">
+          <div class="video-thumb" style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80');">
+            <span class="play-btn" aria-hidden="true">▶</span>
+            <span class="video-duration">3:42</span>
+          </div>
+          <div class="video-body">
+            <h3>A Day at Mithila Meadows</h3>
+            <p>From sunrise birdsong to bonfire stories — a typical day on the farm.</p>
+          </div>
+        </button>
+
+        <button class="video-card" data-video-id="dQw4w9WgXcQ" aria-label="Play video: The Living Art of Madhubani">
+          <div class="video-thumb" style="background-image:url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=80');">
+            <span class="play-btn" aria-hidden="true">▶</span>
+            <span class="video-duration">5:18</span>
+          </div>
+          <div class="video-body">
+            <h3>The Living Art of Madhubani</h3>
+            <p>Meet our local artists and step into a hands-on Mithila painting workshop.</p>
+          </div>
+        </button>
+
+        <button class="video-card" data-video-id="dQw4w9WgXcQ" aria-label="Play video: Mornings on the Ponds">
+          <div class="video-thumb" style="background-image:url('https://images.unsplash.com/photo-1545486332-9e0999c535b2?auto=format&fit=crop&w=900&q=80');">
+            <span class="play-btn" aria-hidden="true">▶</span>
+            <span class="video-duration">2:56</span>
+          </div>
+          <div class="video-body">
+            <h3>Mornings on the Ponds</h3>
+            <p>Mist, nets and the day's first catch — fishing at Mithila Meadows.</p>
+          </div>
+        </button>
+      </div>
+
+      <p class="video-cta">More on our channel · <a href="https://youtube.com/@mithilameadows" target="_blank" rel="noopener">youtube.com/@mithilameadows</a></p>
+    </div>
+  </section>
+
+  <!-- VIDEO LIGHTBOX -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-hidden="true">
+    <button class="video-close" aria-label="Close video">×</button>
+    <div class="video-frame">
+      <iframe id="videoFrame" src="" title="Mithila Meadows video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <!-- TESTIMONIAL -->
   <section class="section testimonial">
     <div class="container center">
@@ -304,20 +363,32 @@
         <a href="#orchards">Orchards</a>
         <a href="#ponds">Fish Ponds</a>
         <a href="#stay">Stay & Experience</a>
+        <a href="#videos">Videos</a>
       </div>
       <div>
         <h4>Visit</h4>
         <a href="#contact">Plan a Visit</a>
         <a href="#gallery">Gallery</a>
-        <a href="#">Directions</a>
-        <a href="#">FAQs</a>
+        <a href="https://maps.google.com/?q=Madhubani+Bihar" target="_blank" rel="noopener">Directions</a>
+        <a href="#contact">FAQs</a>
       </div>
       <div>
         <h4>Follow</h4>
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">YouTube</a>
-        <a href="#">WhatsApp</a>
+        <div class="social-row">
+          <a href="https://instagram.com/mithilameadows" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://facebook.com/mithilameadows" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.7V4.2c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.6H7.7V14h2.7v8h3.1z"/></svg>
+          </a>
+          <a href="https://youtube.com/@mithilameadows" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg>
+          </a>
+          <a href="https://wa.me/919800000000" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.5 3.5A10.4 10.4 0 0 0 12.1 0C6.3 0 1.6 4.7 1.6 10.5c0 1.9.5 3.7 1.4 5.3L1.5 22l6.4-1.7a10.4 10.4 0 0 0 4.2.9h.1c5.8 0 10.5-4.7 10.5-10.5 0-2.8-1.1-5.4-3.1-7.4zM12.1 19.3h-.1c-1.3 0-2.6-.4-3.7-1l-.3-.2-3.8 1 1-3.7-.2-.3a8.7 8.7 0 0 1-1.3-4.6c0-4.8 3.9-8.7 8.7-8.7 2.3 0 4.5.9 6.1 2.6a8.6 8.6 0 0 1 2.5 6.1c0 4.8-3.9 8.7-8.7 8.7zm4.8-6.5c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3a8 8 0 0 1-1.5-1.8c-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.2-.2-.5-.3z"/></svg>
+          </a>
+        </div>
+        <p class="social-note">@mithilameadows</p>
       </div>
     </div>
     <div class="footer-bottom">

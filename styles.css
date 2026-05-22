@@ -289,6 +289,122 @@ p{margin:0 0 14px; color:var(--muted);}
 .gallery-grid img:nth-child(1),
 .gallery-grid img:nth-child(6){grid-row:span 2; height:494px;}
 
+/* VIDEOS */
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+.video-card{
+  background:#fff;
+  border:0; padding:0; margin:0;
+  text-align:left;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  cursor:pointer;
+  font:inherit; color:inherit;
+  transition:transform .25s ease, box-shadow .25s ease;
+  display:flex; flex-direction:column;
+}
+.video-card:hover{transform:translateY(-4px); box-shadow:var(--shadow-md);}
+.video-card:hover .play-btn{background:var(--green-700); color:#fff; transform:translate(-50%, -50%) scale(1.08);}
+.video-thumb{
+  position:relative;
+  height:220px;
+  background-size:cover; background-position:center;
+}
+.video-thumb::before{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
+}
+.play-btn{
+  position:absolute; top:50%; left:50%;
+  transform:translate(-50%, -50%);
+  width:64px; height:64px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.92);
+  color:var(--green-900);
+  display:grid; place-items:center;
+  font-size:1.4rem;
+  padding-left:5px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.3);
+  transition:background .2s ease, transform .25s ease, color .2s ease;
+}
+.video-duration{
+  position:absolute; bottom:12px; right:12px;
+  background:rgba(0,0,0,0.65); color:#fff;
+  padding:3px 8px; border-radius:6px;
+  font-size:0.78rem; font-weight:500;
+  letter-spacing:0.04em;
+}
+.video-body{padding:20px 22px 24px;}
+.video-body h3{margin-bottom:6px;}
+.video-body p{margin:0;}
+.video-cta{
+  text-align:center; margin-top:36px; color:var(--ink);
+  font-size:0.95rem;
+}
+.video-cta a{color:var(--green-700); font-weight:500;}
+.video-cta a:hover{color:var(--green-900); text-decoration:underline;}
+
+/* VIDEO MODAL */
+.video-modal{
+  position:fixed; inset:0;
+  background:rgba(10,15,12,0.88);
+  display:none;
+  align-items:center; justify-content:center;
+  z-index:1000;
+  padding:24px;
+  animation:fadeIn .2s ease;
+}
+.video-modal.open{display:flex;}
+.video-frame{
+  position:relative;
+  width:100%; max-width:980px;
+  aspect-ratio:16/9;
+  background:#000;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+}
+.video-frame iframe{width:100%; height:100%; border:0;}
+.video-close{
+  position:absolute; top:18px; right:24px;
+  background:transparent; border:0;
+  color:#fff; font-size:2.4rem; line-height:1;
+  cursor:pointer; padding:8px;
+  opacity:0.85; transition:opacity .2s ease, transform .2s ease;
+  z-index:1;
+}
+.video-close:hover{opacity:1; transform:rotate(90deg);}
+@keyframes fadeIn{from{opacity:0;} to{opacity:1;}}
+
+/* SOCIAL ICONS */
+.social-row{
+  display:flex; gap:10px;
+  margin:6px 0 12px;
+}
+.social-row a{
+  width:40px; height:40px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.85);
+  display:grid; place-items:center;
+  margin:0;
+  transition:background .2s ease, color .2s ease, transform .2s ease;
+}
+.social-row a:hover{
+  background:var(--gold); color:var(--earth-900);
+  transform:translateY(-2px);
+}
+.social-note{
+  color:rgba(255,255,255,0.55);
+  font-size:0.85rem;
+  margin:0;
+}
+
 /* TESTIMONIAL */
 .testimonial{
   background:var(--green-900);
@@ -383,6 +499,7 @@ p{margin:0 0 14px; color:var(--muted);}
   .two-col.reverse .col-image{order:0;}
   .orchard-grid{grid-template-columns:repeat(2, 1fr);}
   .exp-grid{grid-template-columns:repeat(2, 1fr);}
+  .video-grid{grid-template-columns:repeat(2, 1fr);}
   .gallery-grid{grid-template-columns:repeat(2, 1fr);}
   .gallery-grid img:nth-child(1),
   .gallery-grid img:nth-child(6){grid-row:auto; height:240px;}
@@ -404,7 +521,7 @@ p{margin:0 0 14px; color:var(--muted);}
   }
   .nav-links.open{display:flex;}
   .nav-toggle{display:block;}
-  .orchard-grid, .exp-grid{grid-template-columns:1fr;}
+  .orchard-grid, .exp-grid, .video-grid{grid-template-columns:1fr;}
   .contact-info li{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr;}
   .hero{padding-top:120px;}
