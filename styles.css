@@ -35,7 +35,14 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
-img{max-width:100%; display:block;}
+img{max-width:100%; height:auto; display:block;}
+/* Safety: any image inside a grid container fills its cell */
+.gallery-grid img,
+.visit-gallery-grid img,
+.review-grid img,
+.dignitary-grid img{
+  width:100%; height:auto;
+}
 
 a{color:inherit; text-decoration:none;}
 .container{max-width:var(--max); margin:0 auto; padding:0 24px;}
@@ -423,15 +430,20 @@ p{margin:0 0 14px; color:var(--muted);}
 .visit-gallery-grid{
   display:grid;
   grid-template-columns:repeat(4, 1fr);
-  gap:12px;
+  gap:14px;
 }
 .visit-gallery-grid img{
-  width:100%; height:240px; object-fit:cover;
+  width:100%;
+  aspect-ratio:3/4;
+  height:auto;
+  object-fit:cover;
+  object-position:center 30%;
   border-radius:var(--radius);
-  transition:transform .3s ease;
+  box-shadow:var(--shadow-sm);
+  transition:transform .3s ease, box-shadow .3s ease;
   cursor:zoom-in;
 }
-.visit-gallery-grid img:hover{transform:scale(1.03);}
+.visit-gallery-grid img:hover{transform:scale(1.03); box-shadow:var(--shadow-md);}
 
 /* VIDEOS */
 .video-grid{
@@ -771,7 +783,6 @@ p{margin:0 0 14px; color:var(--muted);}
   .review-grid{grid-template-columns:repeat(2, 1fr);}
   .dignitary-grid{grid-template-columns:repeat(2, 1fr);}
   .visit-gallery-grid{grid-template-columns:repeat(2, 1fr);}
-  .visit-gallery-grid img{height:200px;}
   .gallery-grid{grid-template-columns:repeat(2, 1fr);}
   .gallery-grid img:nth-child(1),
   .gallery-grid img:nth-child(6){grid-row:auto; height:240px;}
@@ -794,8 +805,7 @@ p{margin:0 0 14px; color:var(--muted);}
   .nav-links.open{display:flex;}
   .nav-toggle{display:block;}
   .orchard-grid, .exp-grid, .video-grid, .review-grid, .dignitary-grid{grid-template-columns:1fr;}
-  .visit-gallery-grid{grid-template-columns:1fr;}
-  .visit-gallery-grid img{height:240px;}
+  .visit-gallery-grid{grid-template-columns:1fr 1fr;}
   .contact-info li{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr;}
   .hero{padding-top:120px;}
