@@ -354,6 +354,16 @@ p{margin:0 0 14px; color:var(--muted);}
   grid-template-columns:repeat(3, 1fr);
   gap:24px;
 }
+/* When exactly 5 cards: use flex so the last row of 2 centers nicely */
+.dignitary-grid-5{
+  display:flex; flex-wrap:wrap; justify-content:center;
+  gap:24px;
+}
+.dignitary-grid-5 .dignitary-card{
+  flex:0 1 calc((100% - 48px) / 3);
+  min-width:240px;
+  max-width:340px;
+}
 .dignitary-card{
   background:#fff;
   border-radius:var(--radius-lg);
