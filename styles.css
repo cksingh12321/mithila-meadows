@@ -311,6 +311,13 @@ img.logo-mark{padding:0;}
   background:linear-gradient(135deg, var(--green-700), var(--green-900));
   color:#fff;
 }
+/* When 'And many more' is alone in its last row (7-card layout), stretch it across */
+.orchard-grid > .orchard-card:nth-child(7).others:last-child{
+  grid-column:1 / -1;
+}
+.orchard-grid > .orchard-card:nth-child(7).others:last-child .center-body{
+  padding:34px 22px;
+}
 .orchard-card.others h3{color:#fff;}
 .orchard-card.others p{color:rgba(255,255,255,0.85);}
 .orchard-card.others .season{color:var(--gold);}
