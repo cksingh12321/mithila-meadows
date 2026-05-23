@@ -830,9 +830,24 @@ img.logo-mark{padding:0;}
   .nav-links.open{display:flex;}
   .nav-toggle{display:block;}
   .orchard-grid, .exp-grid, .video-grid, .review-grid, .dignitary-grid{grid-template-columns:1fr;}
+  .orchard-grid > .orchard-card:nth-child(7).others:last-child{grid-column:auto;}
   .visit-gallery-grid{grid-template-columns:1fr 1fr;}
   .contact-info li{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr;}
-  .hero{padding-top:120px;}
-  .hero-stats{grid-template-columns:1fr 1fr;}
+  /* Tighter header on mobile so hero starts higher */
+  .nav-inner{padding:8px 16px; gap:12px;}
+  .logo-mark{width:54px; height:54px; border-width:2px;}
+  .logo-name{font-size:1.05rem;}
+  .logo-tag{font-size:0.62rem; letter-spacing:0.18em; margin-top:3px;}
+  .hero{padding:170px 20px 60px; min-height:auto;}
+  .hero h1{font-size:2rem;}
+  .hero-sub{font-size:1rem; margin-bottom:24px;}
+  .hero-stats{grid-template-columns:1fr 1fr; gap:18px; padding-top:24px;}
+  .hero-stats strong{font-size:1.7rem;}
+  .hero-stats span{font-size:0.7rem;}
+  /* Section padding tighter */
+  .section{padding:56px 0;}
+  .container{padding:0 18px;}
+  /* Reviews & dignitaries minor */
+  .review-card p{font-size:1rem;}
 }
