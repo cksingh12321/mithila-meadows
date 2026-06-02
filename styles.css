@@ -508,6 +508,11 @@ img.logo-mark{padding:0;}
   cursor:zoom-in;
 }
 .visit-gallery-grid img:hover{transform:scale(1.03); box-shadow:var(--shadow-md);}
+/* Single-photo visit gallery: one centered image */
+.visit-gallery-grid-single{
+  grid-template-columns:minmax(300px, 520px);
+  justify-content:center;
+}
 
 /* VIDEOS */
 .video-grid{
