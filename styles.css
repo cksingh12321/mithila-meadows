@@ -513,6 +513,12 @@ img.logo-mark{padding:0;}
   grid-template-columns:minmax(300px, 520px);
   justify-content:center;
 }
+/* Two-photo visit gallery: two centered images */
+.visit-gallery-grid-two{
+  grid-template-columns:repeat(2, minmax(280px, 420px));
+  justify-content:center;
+}
+.visit-gallery-grid-two img{aspect-ratio:4/5;}
 
 /* VIDEOS */
 .video-grid{
