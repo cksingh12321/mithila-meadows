@@ -508,10 +508,17 @@ img.logo-mark{padding:0;}
   cursor:zoom-in;
 }
 .visit-gallery-grid img:hover{transform:scale(1.03); box-shadow:var(--shadow-md);}
-/* Single-photo visit gallery: one centered image */
+/* Single-photo visit gallery: one centered image at natural aspect */
 .visit-gallery-grid-single{
-  grid-template-columns:minmax(300px, 520px);
+  grid-template-columns:minmax(300px, 760px);
   justify-content:center;
+}
+.visit-gallery-grid-single img{
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  height:auto;
+  background:var(--cream-2);
 }
 /* Two-photo visit gallery: two centered images */
 .visit-gallery-grid-two{
