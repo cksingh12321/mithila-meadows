@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "mithila-meadows.vercel.app"
+        }
+      ],
+      "destination": "https://www.mithilameadows.com/:path*",
+      "permanent": true
+    }
+  ]
+}
